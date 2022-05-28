@@ -1,4 +1,4 @@
-"""Константы, в т.ч. тексты ошибок и уведомлений."""
+"""Constants, including error and notification texts."""
 
 
 class RegNotice:

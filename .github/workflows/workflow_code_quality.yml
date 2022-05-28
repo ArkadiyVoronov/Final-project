@@ -12,4 +12,4 @@ jobs:
           pip install flake8 black
       - name: Run flake8
         run: |
-          flake8 .
+          flake8 --ignore=E501 .

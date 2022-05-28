@@ -29,8 +29,7 @@ def app(request):
         chrome_options.headless = True
     else:
         chrome_options.headless = False
-    driver = webdriver.Chrome(ChromeDriverManager().install(), 
-                              options=chrome_options)
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     app = Application(driver, url)
     yield app
     app.quit()

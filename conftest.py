@@ -45,3 +45,20 @@ def login(app):
     data = RegisterUserModel.random()
     app.register.register(data=data)
     app.login.auth(data)
+
+    
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item):
+    outcome = yield
+    rep = outcome.get_result()
+    if rep.when == "call" and rep.failed:
+        try:
+            if "app" in item.fixturenames:
+                web_driver = item.funcargs["app"]
+            else:
+                logger.error("Fail to take screen-shot")
+                return
+            logger.info("Screen-shot done")
+            web_driver.driver.save_screenshot("bag.png")
+        except Exception as e:
+            logger.error("Fail to take screen-shot: {}".format(e))

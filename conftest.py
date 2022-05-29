@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from fixtures.app import Application
+from models.register import RegisterUserModel
 
 logger = logging.getLogger("TravelMarket")
 
@@ -35,7 +36,7 @@ def app(request):
     yield app
     app.quit()
 
-    
+
 @pytest.fixture
 def login(app):
     """
@@ -46,7 +47,7 @@ def login(app):
     app.register.register(data=data)
     app.login.auth(data)
 
-    
+
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item):
     outcome = yield

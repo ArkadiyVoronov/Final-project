@@ -1,4 +1,5 @@
 import logging
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -21,15 +22,15 @@ def pytest_addoption(parser):
 @pytest.fixture
 def app(request):
     url = request.config.getoption("--url")
-    logger.info(f"Start app on {url}")
     headless = request.config.getoption("--headless")
     chrome_options = Options()
-    chrome_options.add_argument("window-size=1800,1080")
     if headless:
         chrome_options.headless = True
     else:
         chrome_options.headless = False
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+    driver.set_window_size(1920, 1080)
+    logger.info(f"Start app on {url}")
     app = Application(driver, url)
     yield app
     app.quit()

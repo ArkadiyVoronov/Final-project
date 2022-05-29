@@ -34,3 +34,14 @@ def app(request):
     app = Application(driver, url)
     yield app
     app.quit()
+
+    
+@pytest.fixture
+def login(app):
+    """
+    Login fixture
+    """
+    app.open_main_page()
+    data = RegisterUserModel.random()
+    app.register.register(data=data)
+    app.login.auth(data)

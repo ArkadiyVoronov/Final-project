@@ -1,0 +1,40 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Tue May 31 10:20:34 GMT 2022","Tue May 31 10:20:34 GMT 2022","0","tests","test_register_page","TestRegisterPage","","","test_re_registration","
+        Re-registration with an existing username in the database.
+        "
+"broken","Tue May 31 10:20:22 GMT 2022","Tue May 31 10:20:22 GMT 2022","0","tests","test_login_page","TestLoginPage","","","test_successful_login","
+        Successful authorization with valid data.
+        "
+"broken","Tue May 31 10:20:31 GMT 2022","Tue May 31 10:20:31 GMT 2022","0","tests","test_register_page","TestRegisterPage","","","test_invalid_email","
+        Registration with an invalid email.
+        "
+"broken","Tue May 31 10:20:31 GMT 2022","Tue May 31 10:20:31 GMT 2022","0","tests","test_register_page","TestRegisterPage","","","test_invalid_age","
+        Registration with an incorrect age (under 18).
+        "
+"broken","Tue May 31 10:20:27 GMT 2022","Tue May 31 10:20:27 GMT 2022","0","tests","test_login_page","TestLoginPage","","","test_login_with_empty_password","
+        Authorization attempt with a blank password.
+        "
+"broken","Tue May 31 10:20:28 GMT 2022","Tue May 31 10:20:28 GMT 2022","0","tests","test_login_page","TestLoginPage","","","test_non_existent_user","
+        Attempting to authorize an unregistered user.
+        "
+"broken","Tue May 31 10:20:26 GMT 2022","Tue May 31 10:20:26 GMT 2022","0","tests","test_login_page","TestLoginPage","","","test_login_with_empty_username","
+        Trying to log in with a blank login.
+        "
+"broken","Tue May 31 10:20:32 GMT 2022","Tue May 31 10:20:32 GMT 2022","0","tests","test_register_page","TestRegisterPage","","","test_password_is_numeric","
+        Registration with a password consisting only of numbers.
+        "
+"broken","Tue May 31 10:20:30 GMT 2022","Tue May 31 10:20:30 GMT 2022","0","tests","test_register_page","TestRegisterPage","","","test_invalid_password","
+        Registration with different Password and Password confirmation.
+        "
+"broken","Tue May 31 10:20:29 GMT 2022","Tue May 31 10:20:29 GMT 2022","0","tests","test_order_page","TestOrderPage","","","test_hotel_booking","
+        Hotel booking.
+        "
+"broken","Tue May 31 10:20:26 GMT 2022","Tue May 31 10:20:26 GMT 2022","0","tests","test_login_page","TestLoginPage","","","test_login_with_invalid_password","
+        Authorization attempt with invalid password.
+        "
+"broken","Tue May 31 10:20:29 GMT 2022","Tue May 31 10:20:29 GMT 2022","0","tests","test_register_page","TestRegisterPage","","","test_valid_registration","
+        Successful registration with valid data.
+        "
+"broken","Tue May 31 10:20:33 GMT 2022","Tue May 31 10:20:33 GMT 2022","0","tests","test_register_page","TestRegisterPage","","","test_password_is_common","
+        Registration with a simple/common password.
+        "

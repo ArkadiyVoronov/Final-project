@@ -1,0 +1,6 @@
+2022-05-31 10:20:34 INFO 
+
+2022-05-31 10:20:34 INFO ====== WebDriver manager ======
+2022-05-31 10:20:34 INFO Current google-chrome version is 101.0.4951
+2022-05-31 10:20:34 INFO Get LATEST chromedriver version for 101.0.4951 google-chrome
+2022-05-31 10:20:34 INFO Driver [/home/runner/.wdm/drivers/chromedriver/linux64/101.0.4951.41/chromedriver] found in cache

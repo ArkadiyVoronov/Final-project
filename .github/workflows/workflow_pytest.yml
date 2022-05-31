@@ -4,14 +4,12 @@ on:
   push:
     paths:
       - '/fixtures/**'
-      - 'locators/**'
       - 'models/**'
       - 'pages/**'
       - 'tests/**'
   pull_request:
      paths:
       - 'fixtures/**'
-      - 'locators/**'
       - 'models/**'
       - 'pages/**'
       - 'tests/**'

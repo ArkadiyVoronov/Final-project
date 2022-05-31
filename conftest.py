@@ -1,5 +1,6 @@
 import logging
-
+import datetime
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -59,7 +60,11 @@ def pytest_runtest_makereport(item):
             else:
                 logger.error("Fail to take screen-shot")
                 return
+            web_driver.get_screenshot_as_png()
+            allure.attach(
+                web_driver.get_screenshot_as_png(),
+                name=f'screen_{datetime.datetime.now()}',
+                attachment_type=allure.attachment_type.PNG)
             logger.info("Screen-shot done")
-            web_driver.driver.save_screenshot("bag.png")
         except Exception as e:
             logger.error("Fail to take screen-shot: {}".format(e))

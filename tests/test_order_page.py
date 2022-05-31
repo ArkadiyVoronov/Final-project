@@ -4,7 +4,7 @@ from fixtures.constants import OrderNotice, LoginNotice
 class TestOrderPage:
     def test_hotel_booking(self, app):
         """
-        Бронирование отеля.
+        Hotel booking.
         """
         app.order_page.open_login_page()
         app.order_page.login()

@@ -7,7 +7,7 @@ from fixtures.constants import RegNotice
 class TestRegisterPage:
     def test_valid_registration(self, app):
         """
-        Успешная регистрация с валидными данными.
+        Successful registration with valid data.
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
@@ -16,7 +16,7 @@ class TestRegisterPage:
 
     def test_invalid_password(self, app):
         """
-        Регистрация с разными Password и Password confirmation.
+        Registration with different Password and Password confirmation.
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
@@ -26,7 +26,7 @@ class TestRegisterPage:
 
     def test_invalid_email(self, app):
         """
-        Регистрация с некорректным email.
+        Registration with an invalid email.
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
@@ -36,7 +36,7 @@ class TestRegisterPage:
 
     def test_invalid_age(self, app):
         """
-        Регистрация с некорректным возрастом (меньше 18 лет).
+        Registration with an incorrect age (under 18).
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
@@ -46,7 +46,7 @@ class TestRegisterPage:
 
     def test_password_is_numeric(self, app):
         """
-        Регистрация с паролем состоящем только из цифр.
+        Registration with a password consisting only of numbers.
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
@@ -56,7 +56,7 @@ class TestRegisterPage:
 
     def test_password_is_common(self, app):
         """
-        Регистрация с простым/распространенным паролем.
+        Registration with a simple/common password.
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()
@@ -66,7 +66,7 @@ class TestRegisterPage:
 
     def test_re_registration(self, app):
         """
-        Повторная регистрация с существующим username в базе данных.
+        Re-registration with an existing username in the database.
         """
         app.register_page.open_register_page()
         data = RegisterUserModel.random()

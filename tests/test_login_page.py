@@ -4,7 +4,7 @@ from fixtures.constants import LoginNotice
 class TestLoginPage:
     def test_successful_login(self, app):
         """
-        Успешная авторизация с валидными данными.
+        Successful authorization with valid data.
         """
         app.login_page.open_login_page()
         app.login_page.entry_data_login()
@@ -12,7 +12,7 @@ class TestLoginPage:
 
     def test_login_with_invalid_password(self, app):
         """
-        Попытка авторизации с невалидным паролем.
+        Authorization attempt with invalid password.
         """
         app.login_page.open_login_page()
         LoginNotice.password = "1234"
@@ -21,7 +21,7 @@ class TestLoginPage:
 
     def test_login_with_empty_username(self, app):
         """
-        Попытка авторизации с незаполненым логином.
+        Trying to log in with a blank login.
         """
         app.login_page.open_login_page()
         LoginNotice.login = None
@@ -30,7 +30,7 @@ class TestLoginPage:
 
     def test_login_with_empty_password(self, app):
         """
-        Попытка авторизации с незаполненым паролем.
+        Authorization attempt with a blank password.
         """
         app.login_page.open_login_page()
         LoginNotice.password = None
@@ -39,7 +39,7 @@ class TestLoginPage:
 
     def test_non_existent_user(self, app):
         """
-        Попытка авторизации незарегистированного пользователя.
+        Attempting to authorize an unregistered user.
         """
         app.login_page.open_login_page()
         LoginNotice.login = "qw"

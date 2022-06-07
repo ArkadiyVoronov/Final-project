@@ -4,6 +4,7 @@ import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeType
 from webdriver_manager.chrome import ChromeDriverManager
 from fixtures.app import Application
 from models.register import RegisterUserModel
@@ -30,7 +31,7 @@ def app(request):
         chrome_options.headless = True
     else:
         chrome_options.headless = False
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+    driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install())
     driver.set_window_size(1920, 1080)
     logger.info(f"Start app on {url}")
     app = Application(driver, url)

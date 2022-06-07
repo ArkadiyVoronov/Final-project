@@ -24,7 +24,7 @@ history_copy:
     artifacts:
         when: always
         paths:
-            - allure_results
+            - ./allure_results
         expire_in: 1 month
     script:
         - 'curl --location --output artifacts.zip "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/main/download?job=pages&job_token=$CI_JOB_TOKEN"'

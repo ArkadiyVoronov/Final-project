@@ -9,7 +9,7 @@ run_tests:
     image: python:3.9
     before_script:
         - pip install -r requirements.txt
-        - sudo apt-get install libnss3
+        - apt-get install libnss3
     script:
         - pytest -v --alluredir=allure_results
     allow_failure: true

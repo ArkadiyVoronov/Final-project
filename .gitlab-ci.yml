@@ -9,6 +9,7 @@ run_tests:
     image: python:3.9
     before_script:
         - pip install -r requirements.txt
+        - apt-get update
         - apt-get install libnss3
     script:
         - pytest -v --alluredir=allure_results

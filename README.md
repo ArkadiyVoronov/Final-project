@@ -6,9 +6,9 @@ Test automation project in python, which will show what we have learned during t
 ![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline-status/gitlab.com/vor.arkadiy/final_project?branch=master)
 
 
-## Final UI-test Student's Project
----
-# Innopolis University
+# Final UI-test Student's Project
+
+## Innopolis University
 
 Final Student's Project for the QA Automation Python Course
 

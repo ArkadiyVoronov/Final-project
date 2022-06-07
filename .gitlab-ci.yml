@@ -48,7 +48,7 @@ generate_report:
 pages:
   stage: report
   script:
-    - mkdir public
+    - mkdir /$CI_PROJECT_PATH/public
     - cp -r ./allure-report/* public
   artifacts:
     paths:

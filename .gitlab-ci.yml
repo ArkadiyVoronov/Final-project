@@ -48,11 +48,11 @@ generate_report:
 pages:
   stage: report
   script:
-    - mkdir /$CI_PROJECT_PATH/public
+    - mkdir /public
     - cp -r ./allure-report/* public
   artifacts:
     paths:
-      - /$CI_PROJECT_PATH/public
+      - ./public
     expire_in: never
   needs:
     - job: generate_report

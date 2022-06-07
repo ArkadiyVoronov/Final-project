@@ -9,7 +9,7 @@ run_tests:
     artifacts:
         when: always
         paths:
-            - allure_results
+            - ./allure_results
         expire_in: 1 month
     image: python:3.9
     before_script:

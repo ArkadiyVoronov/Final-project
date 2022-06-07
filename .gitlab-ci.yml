@@ -49,7 +49,7 @@ pages:
   stage: report
   script:
     - mkdir /public
-    - cp -r ./allure-report/* public
+    - cp -r ./allure-report/* ./public
   artifacts:
     paths:
       - public

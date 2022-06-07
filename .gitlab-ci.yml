@@ -16,7 +16,7 @@ run_tests:
         - pip install -r requirements.txt
         - sudo apt-get install libnss3
     script:
-        - pytest -v --alluredir=allure_results
+        - pytest -v --alluredir=./allure_results tests/
     allow_failure: true
 
 history_copy:

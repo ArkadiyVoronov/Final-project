@@ -52,7 +52,7 @@ pages:
     - cp -r ./allure-report/* public
   artifacts:
     paths:
-      - /$CI_PROJECT/public
+      - /public
     expire_in: never
   needs:
     - job: generate_report

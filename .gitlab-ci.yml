@@ -1,0 +1,58 @@
+stages:
+    - test
+    - history_copy
+    - generate_report
+    - report
+
+run_tests:
+    stage: test
+    artifacts:
+        when: always
+        paths:
+            - allure_results
+        expire_in: 1 month
+    image: python:3.9
+    before_script:
+        - pip install -r requirements.txt
+    script:
+        - pytest -v --alluredir=allure_results
+    allow_failure: true
+
+history_copy:
+    stage: history_copy
+    image: python:3.9
+    artifacts:
+        when: always
+        paths:
+            - allure_results
+        expire_in: 1 month
+    script:
+        - 'curl --location --output artifacts.zip "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/jobs/artifacts/main/download?job=pages&job_token=$CI_JOB_TOKEN"'
+        - unzip artifacts.zip
+        - chmod -R 777 public
+        - cp ./public/history/* ./allure_results
+
+generate_report:
+  stage: generate_report
+  image: frankescobar/allure-docker-service
+  script:
+     - allure generate -c allure_results -o allure-report
+  artifacts:
+    paths:
+      - ./allure-results
+      - ./allure-report
+    expire_in: 1 month
+  rules:
+    - when: always
+
+pages:
+  stage: report
+  script:
+    - mkdir public
+    - cp -r ./allure-report/* public
+  artifacts:
+    paths:
+      - public
+    expire_in: never
+  needs:
+    - job: generate_report

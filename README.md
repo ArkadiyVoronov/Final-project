@@ -5,6 +5,8 @@ Test automation project in python, which will show what we have learned during t
 
 ![Gitlab pipeline status](https://gitlab.com/vor.arkadiy/final_project/-/commits/main/pipeline.svg)
 
+![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+
 
 
 # Final UI-test Student's Project

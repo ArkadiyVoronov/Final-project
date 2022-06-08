@@ -29,7 +29,7 @@ history_job:    # Job name
     - docker    # With this tag, gitlab will figure out which runner to run.
   image: storytel/alpine-bash-curl    # The runner will use a different image to download the test results from the previous pipeline.
   script:
-    - 'curl --location --output artifacts.zip "https://gitlab.com/api/v4/projects/xxxxxxxx/jobs/artifacts/master/download?job=pages&job_token=$CI_JOB_TOKEN"'    # Using the gitlab api, download files from the job, which will be listed below. Please note: xxxxxxxx is your repository number
+    - 'curl --location --output artifacts.zip "https://gitlab.com/api/v4/projects/36313419/jobs/artifacts/master/download?job=pages&job_token=$CI_JOB_TOKEN"'    # Using the gitlab api, download files from the job, which will be listed below. Please note: xxxxxxxx is your repository number
     - apk add unzip    # The image used in this step does not have the unzip utility by default, for this reason we add it to the container
     - unzip artifacts.zip    # Unpack the files
     - chmod -R 777 public    # We give the rights to any manipulations with the content

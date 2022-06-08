@@ -11,9 +11,9 @@ class RegNotice:
 
 
 class LoginNotice:
-    login = "qwerty"
-    password = "L38H84G4f53"
-    email = "qwerty345@gmail.com"
+    login = "some_login"
+    password = "N12H84G4f73"
+    email = "qsome_logingmail.com"
     ERROR_LOGIN = "Please enter a correct username and password. Note that both fields may be case-sensitive."
     INDEX_TEXT = "Rest, which you deserve"
 

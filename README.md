@@ -22,39 +22,33 @@
 
 Final Student's Project for the QA Automation Python Course
 
-Purpose of Project:
-
-    Auto-testing of UI the app https://cypress-tourism-app.herokuapp.com using framework Pytest
-
 Testing app
 
-https://cypress-tourism-app.herokuapp.com
+`https://cypress-tourism-app.herokuapp.com`
 
 Use python 3.8 +
 
 Create and activate virtual environments
 
-for linuxFor Mac OS
+`python3 -m venv env`
 
-python3 -m venv env
-
-source env/bin/activate
+`source env/bin/activate`
 
 For Windows
 
-python3 -m venv env
+`python3 -m venv env`
 
-env\Scripts\activate
+`env\Scripts\activate`
 
 Run in terminal for install used packages
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 Pre-commit
 
 https://pre-commit.com
 
-pre-commit run --all-files
+`pre-commit run --all-files`
 
 CI - GitHub Actions
 

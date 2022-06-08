@@ -13,7 +13,7 @@ lint:
     before_script:
       - python -m pip install -U pip && python -m pip install pylint==2.12.2
     script:
-      - python -m pylint .
+      - python -m pylint $(echo -n /app/*.py && echo -n ' ' && find /app -type d -maxdepth 1 -exec test -e '{}'/__init__.py \; -print | grep -v '^/app/\.')
 
 run_tests:
     stage: test

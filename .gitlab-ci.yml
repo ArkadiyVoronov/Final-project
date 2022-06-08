@@ -7,6 +7,10 @@ stages:    #Each stage is a separate job that the runner will execute.
 
 mypy:
   stage: static analysis
+  image: python:3.9
+  before_script:
+    - python --version
+    - pip install -r requirements.txt
   script:
     - pwd
     - ls -l
@@ -14,12 +18,20 @@ mypy:
     - python -m mypy bild/directory.py
 
 flake8:
-  stage: Static Analysis
+  stage: static analysis
+  image: python:3.9
+  before_script:
+    - python --version
+    - pip install -r requirements.txt
   script:
   - flake8 --max-line-length=120 bild/*.py
 
 pylint:
-  stage: Static Analysis
+  stage: static analysis
+  image: python:3.9
+  before_script:
+    - python --version
+    - pip install -r requirements.txt
   allow_failure: true
   script:
   - pylint -d C0301 bild/*.py

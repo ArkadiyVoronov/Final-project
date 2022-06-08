@@ -1,6 +1,7 @@
 ![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:FinalProject_Build/statusIcon.svg)
 
-![Gitlab pipeline status](https://gitlab.com/vor.arkadiy/final_project/-/commits/main/pipeline.svg)
+
+[![pipeline status](https://gitlab.com/vor.arkadiy/final_project/badges/main/pipeline.svg)](https://gitlab.com/vor.arkadiy/final_project/-/commits/main) 
 
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 

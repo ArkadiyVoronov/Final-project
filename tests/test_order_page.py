@@ -1,5 +1,5 @@
 import allure
-from fixtures.constants import OrderNotice
+from fixtures.constants import OrderNotice, LoginNotice
 
 
 class TestOrderPage:
@@ -11,7 +11,7 @@ class TestOrderPage:
         """
         app.order_page.open_login_page()
         app.order_page.login()
-        assert app.order_page.success_log_in_text() == OrderNotice.login
+        assert app.order_page.success_log_in_text() == LoginNotice.login
         app.order_page.click_button_see_accommodation()
         assert app.order_page.find_button_more() == OrderNotice.BUTTON_MORE
         app.order_page.click_button_more()

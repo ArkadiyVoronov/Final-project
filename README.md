@@ -16,16 +16,6 @@ Final Student's Project for the QA Automation Python Course
 Purpose of Project:
 
     Auto-testing of UI the app https://cypress-tourism-app.herokuapp.com using framework Pytest
-# TODO: перенести task вниз?
-Tasks:
-
-    writing autotests:
-        searching of products (positive and negative);
-        adding products in the basket;
-        in the basket: adding and removing product, deleting product, buying;
-    configuring and running test in CI;
-    writing test cases;
-    receiving reports on tests results.
 
 Testing app
 

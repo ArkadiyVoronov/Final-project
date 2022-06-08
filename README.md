@@ -56,6 +56,8 @@ Running tests:
 
 Open the actual report (Ctrl+leftclick for opening in other page)
 
+Test-cases in [testrail](https://voronov1project.testrail.io/index.php?/suites/view/1&group_by=cases:section_id&group_order=asc&display_deleted_cases=0)
+
 
 
 

@@ -16,7 +16,7 @@ lint:
       - python -m pylint .
 
 run_tests:
-    stage: testing
+    stage: test
     services:
       - selenium/standalone-chrome
     image: python:3.9

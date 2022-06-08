@@ -1,8 +1,19 @@
 stages:
+    - lint
     - test
     - history_copy
     - generate_report
     - report
+
+lint:
+    stage: lint
+    image: python:3.8-slim
+    tags:
+      - docker-linux
+    before_script:
+      - python -m pip install -U pip && python -m pip install pylint==2.12.2
+    script:
+      - python -m pylint .
 
 run_tests:
     stage: testing

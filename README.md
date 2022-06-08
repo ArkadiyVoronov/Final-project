@@ -3,7 +3,8 @@ Test automation project in python, which will show what we have learned during t
 
 ![TeamCity build status](http://188.120.227.87:8111/app/rest/builds/buildType:id:FinalProject_Build/statusIcon.svg)
 
-![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline-status/gitlab.com/vor.arkadiy/final_project?branch=master)
+![Gitlab pipeline status](https://gitlab.com/%{project_path}/badges/%{default_branch}/pipeline.svg)
+
 
 
 # Final UI-test Student's Project

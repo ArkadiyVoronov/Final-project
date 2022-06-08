@@ -18,7 +18,7 @@ class LoginNotice:
     INDEX_TEXT = "Rest, which you deserve"
 
 
-class LoginNotice:
+class OrderNotice:
     INDEX_TEXT = "Rest, which you deserve"
     BUTTON_MORE = "More"
     BUTTON_BOOK = "Book"

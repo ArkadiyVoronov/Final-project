@@ -1,8 +1,28 @@
 stages:    #Each stage is a separate job that the runner will execute.
+  - static analysis
   - testing # Running tests
   - history_copy # Copy test results from previous runs tests
   - reports # Report generation
   - deploy # Publish the report to gitlab pages
+
+mypy:
+  stage: static analysis
+  script:
+    - pwd
+    - ls -l
+    - python -m mypy bild/file.py
+    - python -m mypy bild/directory.py
+
+flake8:
+  stage: Static Analysis
+  script:
+  - flake8 --max-line-length=120 bild/*.py
+
+pylint:
+  stage: Static Analysis
+  allow_failure: true
+  script:
+  - pylint -d C0301 bild/*.py
 
 chrome_job:    # Job name
   stage: testing    # The first stage to run

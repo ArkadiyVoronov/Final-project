@@ -16,7 +16,7 @@
 
 
 
-#Final Student's Project for the QA Automation Python Course
+# Final Student's Project for the QA Automation Python Course
 
 Testing app
 

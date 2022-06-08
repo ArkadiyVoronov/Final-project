@@ -48,16 +48,15 @@ https://pre-commit.com
 
 CI - GitHub Actions
 
-python-publish.yml
+`workflow_pytest.yml`
 
-test.py
-Report - pytest-html
+Running tests:
 
-For testing with getting report run in terminal
-
-pytest --html=report.html --self-contained-html
+`pytest`
 
 Open the actual report (Ctrl+leftclick for opening in other page)
+
+
 
 
 

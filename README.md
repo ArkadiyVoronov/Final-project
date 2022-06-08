@@ -50,6 +50,10 @@ CI - GitHub Actions
 
 `workflow_pytest.yml`
 
+CI - GitLab
+
+`gitlab-ci.yml`
+
 Running tests:
 
 `pytest`

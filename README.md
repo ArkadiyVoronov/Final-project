@@ -3,8 +3,6 @@
 [![GitlabSync](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/workflow_gitlabsync.yml/badge.svg)](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/workflow_gitlabsync.yml)
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 
-
-
 # Final Student's Project for the QA Automation Python Course
 
 Testing app

@@ -1,17 +1,8 @@
 stages:    #Each stage is a separate job that the runner will execute.
-  - coverage
   - testing # Running tests
   - history_copy # Copy test results from previous runs tests
   - reports # Report generation
   - deploy # Publish the report to gitlab pages
-
-
-coverage_job:
-  stage: coverage
-  extends: .python-reports
-  script:
-    - pipenv run pytest --cov --cov-report term-missing --cov-report xml:./coverage_out_report.xml --junitxml=./test_out_report.xml
-  coverage: '/TOTAL.*\s+(\d+%)$/'
 
 chrome_job:    # Job name
   stage: testing    # The first stage to run

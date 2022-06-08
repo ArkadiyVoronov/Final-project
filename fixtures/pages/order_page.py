@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from fixtures.pages.base_page import BasePage
-from fixtures.constants import LoginNotice
+from fixtures.constants import OrderNotice
 
 
 class OrderPage(BasePage):
@@ -20,8 +20,8 @@ class OrderPage(BasePage):
         self.click(locator=self.LOGIN_LINK)
 
     def login(self):
-        self.fill(locator=self.USERNAME_FIELD, value=LoginNotice.login)
-        self.fill(locator=self.PASSWORD_FIELD, value=LoginNotice.password)
+        self.fill(locator=self.USERNAME_FIELD, value=OrderNotice.login)
+        self.fill(locator=self.PASSWORD_FIELD, value=OrderNotice.password)
         self.click(locator=self.LOGIN_BUTTON)
 
     def success_log_in_text(self) -> str:

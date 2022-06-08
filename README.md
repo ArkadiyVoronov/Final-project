@@ -57,32 +57,3 @@ Running tests:
 Open the actual report (Ctrl+leftclick for opening in other page)
 
 Test-cases in [testrail](https://voronov1project.testrail.io/index.php?/suites/view/1&group_by=cases:section_id&group_order=asc&display_deleted_cases=0)
-
-
-
-
-
-
-
-
-Check list:
- + [ ] Необходимо настроить CI (GitHub Actions). В проекте должен присутствовать файл настроек, который описывают логику взаимодействия с CI
-
- + [ ] Необходимо настроить линтер (программа, которая проверяет код на соответствие стандартам в соответствии с определенным набором правил), который должен запускаться локально/на стороне travis-ci
-
- + [ ] К каждому тесту должны присутствовать тест кейсы 
- https://voronov1project.testrail.io/index.php?/projects/overview/1
-            
- + [ ] README.md заполнен и содержит актуальную информацию
-
- + [ ] В файле README.md стоят бейджики GitHub Actions
-
- + [ ] Доступна инструкция по установке зависимостей
-
- + [ ] Описано как запустить тесты
-
- + [ ] Есть информация о цели тестирования и краткое описание проекта
-
- + [ ] Для тестирования используется фреймворк pytest 
-
- + [ ] Результатом тестирования является сгенерированный отчет (например, Allure)

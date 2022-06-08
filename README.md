@@ -3,6 +3,15 @@
 
 [![pipeline status](https://gitlab.com/vor.arkadiy/final_project/badges/main/pipeline.svg)](https://gitlab.com/vor.arkadiy/final_project/-/commits/main) 
 
+
+[![pages-build-deployment](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/pages/pages-build-deployment)
+
+
+[![Tests build](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/workflow_pytest.yml/badge.svg)](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/workflow_pytest.yml)
+
+
+[![GitlabSync](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/workflow_gitlabsync.yml/badge.svg)](https://github.com/ArkadiyVoronov/Final-project/actions/workflows/workflow_gitlabsync.yml)
+
 ![Selenium](https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white)
 
 

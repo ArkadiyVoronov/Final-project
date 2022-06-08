@@ -14,7 +14,7 @@ Final Student's Project for the QA Automation Python Course
 
 Purpose of Project:
 
-    Auto-testing of UI the app https://URL-HERE using framework Pytest
+    Auto-testing of UI the app https://cypress-tourism-app.herokuapp.com using framework Pytest
 # TODO: перенести task вниз?
 Tasks:
 
@@ -28,7 +28,7 @@ Tasks:
 
 Testing app
 
-https://URL-HERE
+https://cypress-tourism-app.herokuapp.com
 
 Use python 3.8 +
 

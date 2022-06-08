@@ -1,10 +1,12 @@
 import random
-
+import allure
 from models.register import RegisterUserModel
 from fixtures.constants import RegNotice
 
 
 class TestRegisterPage:
+    @allure.feature("register page")
+    @allure.story("Successful registration with valid data.")
     def test_valid_registration(self, app):
         """
         Successful registration with valid data.
@@ -14,6 +16,8 @@ class TestRegisterPage:
         app.register_page.register_user(data=data)
         assert app.register_page.success_log_in_text() == RegNotice.LOG_IN
 
+    @allure.feature("register page")
+    @allure.story("Registration with different Password and Password confirmation.")
     def test_invalid_password(self, app):
         """
         Registration with different Password and Password confirmation.
@@ -24,6 +28,8 @@ class TestRegisterPage:
         app.register_page.register_user(data=data)
         assert app.register_page.error_text() == RegNotice.ERROR_PASSWORD
 
+    @allure.feature("register page")
+    @allure.story("Registration with an invalid email.")
     def test_invalid_email(self, app):
         """
         Registration with an invalid email.
@@ -34,6 +40,8 @@ class TestRegisterPage:
         app.register_page.register_user(data=data)
         assert app.register_page.success_log_in_text() != RegNotice.LOG_IN
 
+    @allure.feature("register page")
+    @allure.story("Registration with an incorrect age (under 18).")
     def test_invalid_age(self, app):
         """
         Registration with an incorrect age (under 18).
@@ -44,6 +52,8 @@ class TestRegisterPage:
         app.register_page.register_user(data=data)
         assert app.register_page.error_text() == RegNotice.ERROR_AGE
 
+    @allure.feature("register page")
+    @allure.story("Registration with a password consisting only of numbers.")
     def test_password_is_numeric(self, app):
         """
         Registration with a password consisting only of numbers.
@@ -54,6 +64,8 @@ class TestRegisterPage:
         app.register_page.register_user(data=data)
         assert app.register_page.error_text() == RegNotice.ERROR_PASSWORD_NUMERIC
 
+    @allure.feature("register page")
+    @allure.story("Registration with a simple/common password.")
     def test_password_is_common(self, app):
         """
         Registration with a simple/common password.
@@ -64,6 +76,21 @@ class TestRegisterPage:
         app.register_page.register_user(data=data)
         assert app.register_page.error_text() == RegNotice.ERROR_PASSWORD_COMMON
 
+    @allure.feature("register page")
+    @allure.story("Successful registration with not all fields filled in.")
+    def test_valid_registration_incomplete_data(self, app):
+        """
+        Successful registration with not all fields filled in.
+        """
+        app.register_page.open_register_page()
+        data = RegisterUserModel.random()
+        data.firstname = None
+        data.email = None
+        app.register_page.register_user(data=data)
+        assert app.register_page.success_log_in_text() == RegNotice.LOG_IN
+
+    @allure.feature("register page")
+    @allure.story("Re-registration with an existing username in the database.")
     def test_re_registration(self, app):
         """
         Re-registration with an existing username in the database.

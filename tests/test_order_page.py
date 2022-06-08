@@ -1,7 +1,10 @@
+import allure
 from fixtures.constants import OrderNotice, LoginNotice
 
 
 class TestOrderPage:
+    @allure.feature("order page")
+    @allure.story("Hotel booking.")
     def test_hotel_booking(self, app):
         """
         Hotel booking.

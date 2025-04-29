@@ -4,6 +4,9 @@
 ![Selenium](https://img.shields.io/badge/browser%20automation-Selenium-green)
 ![PageObject](https://img.shields.io/badge/design%20pattern-Page%20Object-green)
 
+
+[Documentation for the project](https://deepwiki.com/ArkadiyVoronov/Final-project)
+
 # Final Student's Project for the QA Automation Python Course
 
 Testing app
